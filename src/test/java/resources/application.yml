@@ -1,0 +1,13 @@
+# MONGODB (MongoProperties)
+spring.data.mongodb:
+  # authentication-database= # Authentication database name.
+  database: pxc-test-ree-data # Database name.
+  #spring.data.mongodb.field-naming-strategy= # Fully qualified name of the FieldNamingStrategy to use.
+# spring.data.mongodb.grid-fs-database= # GridFS database name.
+# spring.data.mongodb.host=localhost # Mongo server host.
+# spring.data.mongodb.password= # Login password of the mongo server.
+  port: 21029 # Mongo server port.
+  # repositories:
+    # enabled: true # Enable Mongo repositories.
+# spring.data.mongodb.uri=mongodb://localhost/test # Mongo database URI. When set, host and port are ignored.
+# spring.data.mongodb.username= # Login user of the mongo server.
