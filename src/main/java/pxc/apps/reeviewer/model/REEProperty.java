@@ -32,6 +32,12 @@ public class REEProperty {
     public REEProperty() {
     }
 
+    public REEProperty(String propertyName, String propertyValue, String entryId) {
+        this.propertyName = propertyName;
+        this.propertyValue = propertyValue;
+        this.entryId = entryId;
+    }
+
     public String getPropertyId() {
         return this.propertyId;
     }

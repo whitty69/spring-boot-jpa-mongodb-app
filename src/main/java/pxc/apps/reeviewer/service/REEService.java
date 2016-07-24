@@ -136,4 +136,8 @@ public class REEService {
         entryRepository.deleteAll();
         systemRepository.deleteAll();
     }
+
+    public void setPropertyRepository(REEPropertyRepository propertyRepository) {
+        this.propertyRepository = propertyRepository;
+    }
 }
