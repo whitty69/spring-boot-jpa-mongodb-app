@@ -65,7 +65,9 @@ public class REESystemControllerTest {
     public void testCreateAndGet() throws Exception {
 
         String id = UUID.randomUUID().toString();
-        REESystem REESystem = new REESystem("test", "descr", "targetDBS");
+        String testName = "test";
+
+        REESystem REESystem = new REESystem(testName, "descr", "targetDBS");
         REESystem.setSystemId(id);
 
         ObjectMapper mapper = new ObjectMapper();
@@ -81,10 +83,10 @@ public class REESystemControllerTest {
                 .andExpect(content().contentType("application/json"))
                 .andExpect(jsonPath("$.systemId", is(id)));
 
-        mvc.perform(MockMvcRequestBuilders.get(URL_PREFIX + "byname/name").accept(MediaType.APPLICATION_JSON_VALUE))
+        mvc.perform(MockMvcRequestBuilders.get(URL_PREFIX + "byname/" + testName).accept(MediaType.APPLICATION_JSON_VALUE))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType("application/json"))
-                .andExpect(jsonPath("$.name", is("name")));
+                .andExpect(jsonPath("$.name", is(testName)));
 
     }
 
